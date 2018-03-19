@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    font-family: 'Miriam Libre', sans-serif;
+    color: white;
+}
+
+body {
+}
+
+.container {
+    background-image: linear-gradient(to bottom, #6a11cb 0%, #2575fc 100%);
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 300px;
+    grid-template-areas:
+        "t t t t v v v v"
+}
+
+.timeText {
+    grid-area: t;
+    display: flex;
+    justify-content: center;
+}
+
+.colorDayStage {
+    grid-area: v;
+}
+
+#urenMinuten {
+    color: white;
+    font-size: 3em;
+    text-shadow: 1px 1px 3px black;
+}
