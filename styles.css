@@ -2,7 +2,6 @@
     margin: 0;
     font-family: 'Miriam Libre', sans-serif;
     color: white;
-    font-size: 50px;
 }
 
 body , html {
@@ -11,7 +10,7 @@ body , html {
 }
 
 body {
-    
+    font-size: 50px;
 }
 
 .container {
@@ -44,32 +43,55 @@ body {
 
 
 
-
-
-
-
-@media (min-width: 1025px) and (max-width: 1280px) {
+/* [LAPTOP] This applies from 1024px to 1366px */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    
+    body {
+        font-size: 46px;
+    }
+        
+    #sun {
+        width: 140px;
+        height: 142px;
+    }
+        
+    .time {
+        padding: 4%;
+    }
     
 }
 
 
-
-
-
-
-
-
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  
+/* [TABLET] This applies from 768px to 1024px */
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        
+    body {
+        font-size: 40px;
+    }
+        
+    #sun {
+        width: 120px;
+        height: 122px;
+    }
+        
+    .time {
+        padding: 4%;
+    }
 }
 
-
-
-
-
-
-
-@media (min-width: 320px) and (max-width: 767px) {
-
+/* [PHONE] This applies from 0px to 374px */
+@media only screen and (min-width: 374px) and (max-width: 767px) {
+ 
+    body {
+        font-size: 30px;
+    }
+    
+    #sun {
+        width: 100px;
+        height: 102px;
+    }
+    
+    .time {
+        padding: 8%;
+    }
 }

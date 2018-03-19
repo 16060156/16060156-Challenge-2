@@ -54,9 +54,6 @@ function maintime() {
     else if (hours >= 19 && hours <= 23) {
            document.getElementById('background').style.background = "linear-gradient(to top, #319FE4 0%, #136DD4 100%)";   
        }
-    
-//    var symbol = document.getElementById("sun");
-//    symbol.src = "moon.png"
 }
 
 setInterval(maintime, 100);
