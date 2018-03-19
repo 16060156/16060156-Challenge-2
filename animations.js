@@ -39,10 +39,24 @@ function maintime() {
     document.getElementById("mainTime").innerHTML = hours+":"+mins;
     document.getElementById("mainDay").innerHTML = day+", "+dayNumber+" "+month;
     
-   if (hours >= 0 && hours <= 23) {
-           document.getElementById('background').style.background = '-webkit-linear-gradient('
-        + 'rgba(4, 24, 35, 0.80)' + ', ' + 'rgba(18, 9, 40, 0.80)' + '), url(alleen voor background)';   
+   if (hours >= 0 && hours <= 6) {
+           document.getElementById('background').style.background = "linear-gradient(to top, #1868D6 0%, #263C85 100%)";   
        }
+    
+    else if (hours >= 7 && hours <= 11) {
+           document.getElementById('background').style.background = "linear-gradient(to top, #CFD2E4 0%, #AFDCFA 100%)";   
+       }
+    
+    else if (hours >= 12 && hours <= 18) {
+           document.getElementById('background').style.background = "linear-gradient(to top, #87D5F8 0%, #41B8EF 100%)";   
+       }
+    
+    else if (hours >= 19 && hours <= 23) {
+           document.getElementById('background').style.background = "linear-gradient(to top, #319FE4 0%, #136DD4 100%)";   
+       }
+    
+//    var symbol = document.getElementById("sun");
+//    symbol.src = "moon.png"
 }
 
 setInterval(maintime, 100);
