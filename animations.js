@@ -1,27 +1,22 @@
-function time() {
+function maintime() {
     
-    var datum = new Date();
+    var d = new Date();
+    var hours = d.getHours();
+    var mins = d.getMinutes();
     
-    var minuut = datum.getMinutes();
-    var uur = datum.getHours();
+    var weekday = new Array(7);
+        weekday[0] =  "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+    var day = weekday[d.getDay()];
     
-    var dagNummer = datum.getDay();
+    document.getElementById("mainTime").innerHTML = hours+":"+mins+" "+day;
     
-    var dag = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    document.getElementById("dagNummerMaand").innerHTML = dag[datum.getDay()];
-    
-//    var maand = ["january","february","march","april","june","july","august","september","october","november","december"];
-//    document.getElementById("dagNummerMaand").innerHTML = maand[datum.getMonth()];
-    
-    if(minuut < 10 ) {
-        minuut = "0" + minuut;
-    } 
-    
-    var tijd = uur + ":" + minuut;
-    document.getElementById("urenMinuten").innerHTML = tijd; 
-    
-    var dagDagMaand = dag + ", " + dagNummer + maand;
-    document.getElementById("dagNummerMaand").innerHTML = dagDagMaand;
 }
 
-setInterval(time, 100);
+setInterval(maintime, 100);
