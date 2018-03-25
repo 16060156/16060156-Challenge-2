@@ -57,3 +57,31 @@ function maintime() {
 }
 
 setInterval(maintime, 100);
+
+var sun = document.getElementById('sun');
+
+var tl1 = new TimelineMax();
+tl1.to(sun, 1, {top: 75, opacity: 0, x: 50});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
