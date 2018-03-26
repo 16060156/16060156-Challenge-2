@@ -8,7 +8,11 @@ function maintime() {
     if (mins < 10) {
         mins = "0"+mins;
     }
-    
+
+    if (hours < 10) {
+        hours = "0"+hours;
+    }
+
     var weekDay = new Array(7);
         weekDay[0] = "Sunday";
         weekDay[1] = "Monday";
@@ -71,8 +75,9 @@ var mainDay = document.getElementById('mainDay');
 
 
                                                             // Animaties
-var tl1 = new TimelineMax();
-tl1.to('#sun', 1, {top: 130, opacity: 1});
+var tl1 = new TimelineMax({repeat: -1, repeatDelay: 2});
+tl1.from('#sun', 5, {top: 130, opacity: 0})
+tl1.to('#sun', 4, {top: 130, opacity: 1});
 
 var tl2 = new TimelineMax();
 tl2.from('#fullTime', 0.6, {top: 225, ease: Bounce.easeOut})
